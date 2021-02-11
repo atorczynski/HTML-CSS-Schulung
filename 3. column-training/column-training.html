@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- UIkit CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/uikit@3.6.11/dist/css/uikit.min.css"
+    />
+    <link rel="stylesheet" href="column-training copy.css" />
+  </head>
+  <body>
+    <!-- BITTE ACHTE DARAUF, DASS SICH DIESE DATEI IN EINEM ORDNER MIT DER "column-training.css" BEFINDEN MUSS -->
+    <!-- BITTE DIESE DATEI MIT DEM LIVE SERVER STARTEN. (UNTERE LEISTE -> Go Live) -->
+
+    <!-- Warum ist die Klasse uk-scope wichtig? Erinnere dich daran, wie wir HTML Elemente im CSS auswählen. Brauchen wir diese Klasse immer? -->
+
+    <div class="uk-scope"></div>
+
+    <!-- Die Page sieht an die Seiten gepresst aus. Was können wir tun, um an den Seiten etwas Luft zu schaffen? Bitte trage dein CSS in den leeren style ein.
+        https://developer.mozilla.org/en-US/docs/Web/CSS/padding oder https://developer.mozilla.org/en-US/docs/Web/CSS/margin ? Für was hast du dich entscheiden und warum? -->
+
+    <div class="uk-width-1-1" style="padding: 50px">
+      <!-- Unten ist eine leere Klaase.
+          Bitte gehe auf https://getuikit.com/docs/column und überlege welche der uk-column-*-*@* Klasse passen könnte.
+          Die Cards sollen responsive werden und im kleinen Fenster (s) untereinander angezeigt werden, im größeren Fenster, nebeneinander.-->
+
+      <div class="uk-column-1-2@s">
+        <div class="uk-card uk-card-default uk-card-body uk-width-1-1@m">
+          <h3 class="uk-card-title">Default</h3>
+          <p>
+            Lorem ipsum sit amet, consectetur adipiscing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        </div>
+        <div class="uk-card uk-card-default uk-card-body uk-width-1-1@m">
+          <h3 class="uk-card-title">Default</h3>
+          <p>
+            Lorem ipsum sit amet, consectetur adipiscing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        </div>
+      </div>
+
+      <!-- EXTRA: Versuche eine Container Klasse zu erstellen, welche die Karten ohne die Hilfe von UIKit responsive reagieren lässt.
+            Der Name der Klasse ist eingetragen (card-container). In der beiliegenden column-training.css kannst du diese bearbeiten.
+          HILFE: https://developer.mozilla.org/en-US/docs/Web/CSS/flex 
+          Tipp: Du brauchst folgende properties. -> display und flex-wrap -->
+      <div class="card-container" style="margin-top: 20%">
+        <div
+          class="uk-card uk-card-default uk-card-body uk-width-1-1@m"
+          style="max-width: 400px; margin: 50px"
+        >
+          <h3 class="uk-card-title">Default</h3>
+          <p>
+            Lorem ipsum sit amet, consectetur adipiscing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        </div>
+        <div
+          class="uk-card uk-card-default uk-card-body uk-width-1-1@m"
+          style="max-width: 400px; margin: 50px"
+        >
+          <h3 class="uk-card-title">Default</h3>
+          <p>
+            Lorem ipsum sit amet, consectetur adipiscing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- BITTE IGNORIEREN -->
+    <style>
+      html,
+      body,
+      div,
+      span,
+      applet,
+      object,
+      iframe,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p,
+      blockquote,
+      pre,
+      a,
+      abbr,
+      acronym,
+      address,
+      big,
+      cite,
+      code,
+      del,
+      dfn,
+      em,
+      img,
+      ins,
+      kbd,
+      q,
+      s,
+      samp,
+      small,
+      strike,
+      strong,
+      sub,
+      sup,
+      tt,
+      var,
+      b,
+      u,
+      i,
+      center,
+      dl,
+      dt,
+      dd,
+      ol,
+      ul,
+      li,
+      fieldset,
+      form,
+      label,
+      legend,
+      table,
+      caption,
+      tbody,
+      tfoot,
+      thead,
+      tr,
+      th,
+      td,
+      article,
+      aside,
+      canvas,
+      details,
+      embed,
+      figure,
+      figcaption,
+      footer,
+      header,
+      hgroup,
+      menu,
+      nav,
+      output,
+      ruby,
+      section,
+      summary,
+      time,
+      mark,
+      audio,
+      video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+      }
+      /* HTML5 display-role reset for older browsers */
+      article,
+      aside,
+      details,
+      figcaption,
+      figure,
+      footer,
+      header,
+      hgroup,
+      menu,
+      nav,
+      section {
+        display: block;
+      }
+      body {
+        line-height: 1;
+      }
+      ol,
+      ul {
+        list-style: none;
+      }
+      blockquote,
+      q {
+        quotes: none;
+      }
+      blockquote:before,
+      blockquote:after,
+      q:before,
+      q:after {
+        content: '';
+        content: none;
+      }
+      table {
+        border-collapse: collapse;
+        border-spacing: 0;
+      }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.11/dist/js/uikit-icons.min.js"></script>
+  </body>
+</html>
