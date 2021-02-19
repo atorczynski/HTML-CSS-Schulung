@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- UIkit CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/uikit@3.6.11/dist/css/uikit.min.css"
+    />
+  </head>
+  <body>
+    <!-- BITTE ACHTE DARAUF, DASS SICH DIESE DATEI IN EINEM ORDNER MIT DER "column-training.css" BEFINDEN MUSS -->
+    <!-- BITTE DIESE DATEI MIT DEM LIVE SERVER STARTEN. (UNTERE LEISTE -> Go Live) -->
+
+    <!-- Warum ist die Klasse uk-scope wichtig? Erinnere dich daran, wie wir HTML Elemente im CSS auswählen. Brauchen wir diese Klasse immer? -->
+
+    <div class="uk-scope">
+      <div
+        class="uk-column-1-1 uk-flex uk-flex-auto uk-flex-wrap"
+        style="background-color: #eff0f0"
+      >
+        <div class="uk-width-1-2@m uk-width-1-1@s">
+          <img
+            uk-img
+            src="toyota-c-hr-2019-alternate-01_tcm-17-1775553.jpg"
+            alt=""
+          />
+        </div>
+        <div
+          class="uk-width-1-3@m uk-width-1-1@s uk-text-center uk-flex-auto uk-margin-large-top"
+        >
+          <h2 class="uk-h2">ERWARTE PACKENDE PERFORMANCE</h2>
+          <p>
+            Urbane Mobilität verkörpert der neue Toyota C-HR wie kein anderer.
+            Die tiefe, breite Ausführung sorgt für hohe Kurvenstabilität, die
+            sofortige Beschleunigung macht Überholvorgänge zum Kinderspiel und
+            der Hybridantrieb der neuesten Generation ist in
+            Niedrigemissionszonen unerlässlich.
+          </p>
+        </div>
+      </div>
+      <div class="uk-column-1-1 flex-box" style="background-color: #eff0f0">
+        <div class="uk-width-1-2@m uk-width-1-1@s">
+          <img
+            uk-img
+            src="toyota-c-hr-2019-alternate-02_tcm-17-1775554.jpg"
+            alt=""
+          />
+        </div>
+        <div
+          class="uk-width-1-3@m uk-width-1-1@s uk-text-center uk-flex-auto uk-margin-large-top"
+        >
+          <h2 class="uk-h2">Alles fühlt sich perfekt an</h2>
+          <p>
+            Der Innenraum ist mit Soft-Touch-Materialien ausgekleidet, die mit
+            schwarz glänzenden Elementen kontrastieren. Geht der Tag zu Ende,
+            taucht die Ambiente-Beleuchtung den Innenraum passend dazu in ein
+            sanftes Blau. Das ist Komfort von seiner schönsten Seite.
+          </p>
+        </div>
+      </div>
+    </div>
+    <style>
+      .flex-box {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row-reverse;
+      }
+    </style>
+
+    <!-- BITTE IGNORIEREN -->
+
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.11/dist/js/uikit-icons.min.js"></script>
+  </body>
+</html>
