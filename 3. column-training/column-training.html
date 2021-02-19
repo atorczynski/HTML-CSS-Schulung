@@ -10,7 +10,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/uikit@3.6.11/dist/css/uikit.min.css"
     />
-    <link rel="stylesheet" href="column-training copy.css" />
+    <link rel="stylesheet" href="column-training.css" />
   </head>
   <body>
     <!-- BITTE ACHTE DARAUF, DASS SICH DIESE DATEI IN EINEM ORDNER MIT DER "column-training.css" BEFINDEN MUSS -->
@@ -18,57 +18,57 @@
 
     <!-- Warum ist die Klasse uk-scope wichtig? Erinnere dich daran, wie wir HTML Elemente im CSS auswählen. Brauchen wir diese Klasse immer? -->
 
-    <div class="uk-scope"></div>
-
-    <!-- Die Page sieht an die Seiten gepresst aus. Was können wir tun, um an den Seiten etwas Luft zu schaffen? Bitte trage dein CSS in den leeren style ein.
+    <div class="uk-scope">
+      <!-- Die Page sieht an die Seiten gepresst aus. Was können wir tun, um an den Seiten etwas Luft zu schaffen? Bitte trage dein CSS in den leeren style ein.
         https://developer.mozilla.org/en-US/docs/Web/CSS/padding oder https://developer.mozilla.org/en-US/docs/Web/CSS/margin ? Für was hast du dich entscheiden und warum? -->
 
-    <div class="uk-width-1-1" style="padding: 50px">
-      <!-- Unten ist eine leere Klaase.
+      <div class="uk-width-1-1" style="padding: 50px">
+        <!-- Unten ist eine leere Klaase.
           Bitte gehe auf https://getuikit.com/docs/column und überlege welche der uk-column-*-*@* Klasse passen könnte.
           Die Cards sollen responsive werden und im kleinen Fenster (s) untereinander angezeigt werden, im größeren Fenster, nebeneinander.-->
 
-      <div class="uk-column-1-2@s">
-        <div class="uk-card uk-card-default uk-card-body uk-width-1-1@m">
-          <h3 class="uk-card-title">Default</h3>
-          <p>
-            Lorem ipsum sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua.
-          </p>
+        <div class="uk-column-1-2@s">
+          <div class="uk-card uk-card-default uk-card-body uk-width-1-1@m">
+            <h3 class="uk-card-title">Default</h3>
+            <p>
+              Lorem ipsum sit amet, consectetur adipiscing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </div>
+          <div class="uk-card uk-card-default uk-card-body uk-width-1-1@m">
+            <h3 class="uk-card-title">Default</h3>
+            <p>
+              Lorem ipsum sit amet, consectetur adipiscing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </div>
         </div>
-        <div class="uk-card uk-card-default uk-card-body uk-width-1-1@m">
-          <h3 class="uk-card-title">Default</h3>
-          <p>
-            Lorem ipsum sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua.
-          </p>
-        </div>
-      </div>
 
-      <!-- EXTRA: Versuche eine Container Klasse zu erstellen, welche die Karten ohne die Hilfe von UIKit responsive reagieren lässt.
+        <!-- EXTRA: Versuche eine Container Klasse zu erstellen, welche die Karten ohne die Hilfe von UIKit responsive reagieren lässt.
             Der Name der Klasse ist eingetragen (card-container). In der beiliegenden column-training.css kannst du diese bearbeiten.
           HILFE: https://developer.mozilla.org/en-US/docs/Web/CSS/flex 
           Tipp: Du brauchst folgende properties. -> display und flex-wrap -->
-      <div class="card-container" style="margin-top: 20%">
-        <div
-          class="uk-card uk-card-default uk-card-body uk-width-1-1@m"
-          style="max-width: 400px; margin: 50px"
-        >
-          <h3 class="uk-card-title">Default</h3>
-          <p>
-            Lorem ipsum sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua.
-          </p>
-        </div>
-        <div
-          class="uk-card uk-card-default uk-card-body uk-width-1-1@m"
-          style="max-width: 400px; margin: 50px"
-        >
-          <h3 class="uk-card-title">Default</h3>
-          <p>
-            Lorem ipsum sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua.
-          </p>
+        <div class="card-container" style="margin-top: 20%">
+          <div
+            class="uk-card uk-card-default uk-card-body uk-width-1-1@m"
+            style="max-width: 400px; margin: 50px"
+          >
+            <h3 class="uk-card-title">Default</h3>
+            <p>
+              Lorem ipsum sit amet, consectetur adipiscing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </div>
+          <div
+            class="uk-card uk-card-default uk-card-body uk-width-1-1@m"
+            style="max-width: 400px; margin: 50px"
+          >
+            <h3 class="uk-card-title">Default</h3>
+            <p>
+              Lorem ipsum sit amet, consectetur adipiscing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </div>
         </div>
       </div>
     </div>
