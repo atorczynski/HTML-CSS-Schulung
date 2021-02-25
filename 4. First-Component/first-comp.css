@@ -1,11 +1,25 @@
-      .text-justify-center {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-      }
+.uk-scope .text-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0px 20px 0px 20px;
+}
 
-      .flex-box {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row-reverse;
-      }
+.uk-scope .box-reverse {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.uk-scope .flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 890px) {
+  img {
+    max-width: 450px;
+    max-height: 425px;
+    margin: 0;
+  }
+}
