@@ -1,0 +1,44 @@
+.component-scope .content-container {
+  height: 410px;
+  width: 100%;
+  display: ??;
+  flex-direction: ??;
+  flex-wrap: ??;
+}
+
+.component-scope > .content-container > .content-wrapper {
+  height: 100%;
+  display: ??;
+  flex-direction: ??;
+  align-items: ??;
+  flex-basis: ??; WICHTIG
+  flex-grow: ??; WICHTIG
+  flex-shrink: ??;
+  background-size: cover; 
+}
+
+.component-scope > .content-container > .content-wrapper > .caption {
+  display: ??;
+  flex-direction: ??;
+  justify-content: ??; WICHTIG
+  align-items: ??;
+  width: 85%;
+  height: 100px;
+  background-color: white;
+  flex-wrap: ??;
+  font-family: 'Roboto';
+}
+
+.component-scope .caption h3 {
+  opacity: 0.5;
+  padding: 0;
+  margin: 0;
+  font-size: 3rem;
+}
+.component-scope .caption p {
+  opacity: 0.75;
+  padding: 0;
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
