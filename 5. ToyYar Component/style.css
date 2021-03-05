@@ -11,10 +11,15 @@
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
-  flex-basis: 450px;
+  width: 400px;
   flex-grow: 1;
   flex-shrink: 1;
   background-size: cover;
+  transition: all 0.5s ease;
+}
+.component-scope .hi {
+  width: 1000px;
+  height: 500px;
 }
 
 .component-scope .caption {

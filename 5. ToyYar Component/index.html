@@ -16,7 +16,9 @@
     <div class="component-scope">
       <div class="content-container">
         <div
-          class="content-card"
+          onclick="addClass()"
+          class="content-card views"
+          id="3"
           style="
             background-image: url(assets/200817_TOY_Yaris_GradePage_Visual_992x558px_01_tcm-17-2049717.png);
           "
@@ -27,7 +29,9 @@
           </div>
         </div>
         <div
-          class="content-card"
+          onclick="addClass()"
+          class="content-card views"
+          id="3"
           style="
             background-image: url(assets/200817_TOY_Yaris_GradePage_Visual_992x558px_02_tcm-17-2049718.png);
           "
@@ -39,7 +43,9 @@
           </div>
         </div>
         <div
-          class="content-card"
+          onclick="addClass()"
+          class="content-card views"
+          id="3"
           style="
             background-image: url(assets/200817_TOY_Yaris_GradePage_Visual_992x558px_03_tcm-17-2049716.png);
           "
@@ -53,7 +59,27 @@
     </div>
 
     <script>
-      const BUTTON = document.querySelectorAll('.content-card-2');
+      const addClass = () => {
+        let dropDowns = document.querySelectorAll('.views');
+
+        const handleClick = (e) => {
+          console.log('action!');
+          e.preventDefault();
+          if (e.currentTarget.classList.contains('hi')) {
+            dropDowns.forEach((node) => {
+              node.classList.remove('hi');
+            });
+          } else {
+            dropDowns.forEach((node) => {
+              node.classList.remove('hi');
+            });
+            e.currentTarget.classList.add('hi');
+          }
+        };
+        dropDowns.forEach((node) => {
+          node.addEventListener('click', handleClick);
+        });
+      };
     </script>
   </body>
 </html>
