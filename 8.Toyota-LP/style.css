@@ -1,0 +1,45 @@
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+p,
+h2 {
+  text-indent: 0em;
+  text-align: left;
+  padding: 15px 0px;
+}
+
+img {
+  padding: 30px 0px;
+}
+
+svg {
+  margin-right: 20px;
+}
+
+ul {
+  padding: 20px 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  height: 55px;
+  border-bottom: 1px solid rgb(226, 226, 226);
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.model_info {
+  width: 50%;
+  flex-basis: 600px;
+  padding-left: 40px;
+}
+
+.btn {
+  margin: 10px;
+}

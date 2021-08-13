@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marisa's Movie Plot - Preview</title>
+  </head>
+  <body>
+    <!-- UIkit CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/uikit@3.6.22/dist/css/uikit.min.css"
+    />
+
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.22/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.22/dist/js/uikit-icons.min.js"></script>
+    <nav class="uk-navbar-container uk-margin uk-visible@m" uk-navbar>
+      <!-- Desktop Bereich-->
+      <div class="uk-navbar-center">
+        <a class="uk-navbar-item uk-logo" href="#">Logo</a>
+        <div>
+          <span
+            class="uk-icon uk-margin-small-right"
+            uk-icon="icon: star"
+          ></span>
+        </div>
+
+        <div class="uk-navbar-item">
+          <form action="javascript:void(0)">
+            <input
+              class="uk-input uk-form-width-large"
+              id="searchinput"
+              type="text"
+              placeholder="Filmtitel"
+            />
+            <button class="uk-button uk-button-default" id="getdata">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!-- Ende Desktop Bereich-->
+    <!-- Mobil Bereich-->
+    <div class="uk-hidden@m">
+      <div class="uk-flex uk-flex-center">
+        <a class="uk-navbar-item uk-logo" href="#">Logo</a>
+        <span
+          class="uk-icon uk-margin-small-right uk-flex uk-flex-center"
+          uk-icon="icon: star"
+        ></span>
+      </div>
+      <nav class="uk-navbar-container uk-hidden@m" uk-navbar>
+        <div class="uk-navbar-left">
+          <div class="uk-navbar-item">
+            <form class="uk-search uk-search-navbar">
+              <span uk-search-icon></span>
+              <input
+                class="uk-search-input"
+                type="search"
+                placeholder="Search"
+              />
+            </form>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="uk-flex uk-width-1-1">
+      <div class="uk-width-1-1">
+        <div
+          class="
+            uk-card
+            uk-card-default
+            uk-grid-collapse
+            uk-child-width-1-2@s
+            uk-margin
+          "
+          uk-grid
+        >
+          <div
+            class="uk-card-media-left uk-cover-container uk-flex uk-flex-center"
+          >
+            <img id="cover" width="" height="" alt="" uk-img />
+          </div>
+          <div>
+            <div class="uk-card-body">
+              <h3 class="uk-card-title" id="movietitle"></h3>
+              <p id="moviedescription"></p>
+              <p>
+                <span class="uk-text-bold">Year:</span>
+                <span id="movieyear"> </span>
+              </p>
+              <p>
+                <span class="uk-text-bold">Release:</span>
+                <span id="movierelease"></span>
+              </p>
+              <p>
+                <span class="uk-text-bold">Runtime:</span>
+                <span id="movieruntime"></span>
+              </p>
+              <p>
+                <span class="uk-text-bold">Genre:</span>
+                <span id="moviegenre"></span>
+              </p>
+              <p>
+                <span class="uk-text-bold">Actors:</span>
+                <span id="movieactors"></span>
+              </p>
+
+              <div>
+                <div>
+                  <p class="uk-text-lighter" style="margin: 0 0 0 10px">
+                    Rotten Tomatoes
+                  </p>
+                  <div class="uk-position-relative">
+                    <progress
+                      id="js-progressbar-rt"
+                      class="uk-progress uk-position-absolute"
+                      style="height: 30px"
+                      value="0"
+                      max="100"
+                    ></progress>
+                    <p
+                      class="uk-position-relative"
+                      style="margin: 0px 0 0 15px; color: white"
+                    >
+                      Rating: 79/100
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div>
+                  <p class="uk-text-lighter" style="margin: 20px 0 0 10px">
+                    IMDB
+                  </p>
+                  <div class="uk-position-relative">
+                    <progress
+                      id="js-progressbar-imdb"
+                      class="uk-progress uk-position-absolute"
+                      style="height: 30px"
+                      value="0"
+                      max="100"
+                    ></progress>
+                    <p
+                      class="uk-position-relative"
+                      style="margin: 0px 0 0 15px; color: white"
+                    >
+                      Rating: 88/100
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div>
+                  <p class="uk-text-lighter" style="margin: 20px 0 0 10px">
+                    Metacritic
+                  </p>
+                  <div class="uk-position-relative">
+                    <progress
+                      id="js-progressbar-mc"
+                      class="uk-progress uk-position-absolute"
+                      style="height: 30px"
+                      value="0"
+                      max="100"
+                    ></progress>
+                    <p
+                      class="uk-position-relative"
+                      style="margin: 0px 0 0 15px; color: white"
+                    >
+                      Rating: 66/100
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <script>
+                UIkit.util.ready(function () {
+                  var barRT = document.getElementById('js-progressbar-rt');
+                  var barIMDB = document.getElementById('js-progressbar-imdb');
+                  var barMC = document.getElementById('js-progressbar-mc');
+
+                  var animate = setInterval(function () {
+                    barRT.value += 79;
+                    barIMDB.value += 88;
+                    barMC.value += 66;
+
+                    if (barRT.value && barIMDB.value) {
+                      clearInterval(animate);
+                    }
+                  }, 1000);
+                });
+              </script>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Ende Desktop Bereich-->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+      integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      let movieTitle = document.getElementById('movietitle');
+      let movieYear = document.getElementById('movieyear');
+      let movieRelease = document.getElementById('movierelease');
+      let movieRuntime = document.getElementById('movieruntime');
+      let movieDescription = document.getElementById('moviedescription');
+      let movieGenre = document.getElementById('moviegenre');
+      let movieActors = document.getElementById('movieactors');
+      let cover = document.getElementById('cover');
+      let getDataBtn = document.getElementById('getdata');
+
+      const getData = async () => {
+        let searchInput = document.getElementById('searchinput');
+        let searchQuery = searchInput.value;
+
+        const data = await axios.get(
+          `https://www.omdbapi.com/?apikey=c851ba66&t=${searchQuery}`
+        );
+
+        console.log(data.data);
+        movieTitle.innerHTML = data.data.Title;
+        movieYear.innerHTML = data.data.Year;
+        movieRelease.innerHTML = data.data.Released;
+        movieRuntime.innerHTML = data.data.Runtime;
+        movieDescription.innerHTML = data.data.Plot;
+        movieGenre.innerHTML = data.data.Genre;
+        movieActors.innerHTML = data.data.Actors;
+        cover.setAttribute('data-src', data.data.Poster);
+      };
+
+      getDataBtn.addEventListener('click', async () => {
+        await getData();
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marisa's Movie Plot</title>
+  </head>
+  <body>
+    <!-- UIkit CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/uikit@3.6.22/dist/css/uikit.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.22/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.22/dist/js/uikit-icons.min.js"></script>
+    <nav class="uk-navbar-container uk-margin uk-visible@m" uk-navbar>
+      <div class="uk-navbar-center">
+        <a class="uk-navbar-item uk-logo" href="#">Logo</a>
+        <div>
+          <span
+            class="uk-icon uk-margin-small-right"
+            uk-icon="icon: star"
+          ></span>
+        </div>
+
+        <div class="uk-navbar-item">
+          <form action="javascript:void(0)">
+            <input
+              class="uk-input uk-form-width-large"
+              type="text"
+              placeholder="Filmtitel"
+            />
+            <button class="uk-button uk-button-default">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <div class="uk-hidden@m">
+      <div class="uk-flex uk-flex-center">
+        <a class="uk-navbar-item uk-logo" href="#">Logo</a>
+        <span
+          class="uk-icon uk-margin-small-right uk-flex uk-flex-center"
+          uk-icon="icon: star"
+        ></span>
+      </div>
+      <nav
+        class="uk-navbar-container uk-hidden@m"
+        style="margin-top: 50vh"
+        uk-navbar
+      >
+        <div class="uk-navbar-left">
+          <div class="uk-navbar-item">
+            <form class="uk-search uk-search-navbar">
+              <span uk-search-icon></span>
+              <input
+                class="uk-search-input"
+                type="search"
+                placeholder="Search"
+              />
+            </form>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="uk-container uk-container-xlarge">
+      //ANIMATE SHIT! REGEN UND SO
+      <div
+        class="
+          uk-card uk-card-secondary uk-width-1-4
+          animate__animated animate__fadeInDown
+        "
+      >
+        <div class="uk-card-media-top">
+          <img src="https://source.unsplash.com/random/400x220" alt="" uk-img />
+        </div>
+        <div class="uk-card-body">
+          <h3 class="uk-card-title">Media Top</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
